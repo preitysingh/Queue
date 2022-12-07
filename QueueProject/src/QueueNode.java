@@ -1,6 +1,6 @@
 //preity's node class
 public class QueueNode<N> {
-    //parent,child,data variables
+    //parent,child,data instance variables
     private QueueNode parent;
     private QueueNode child;
     private N data;
@@ -21,7 +21,7 @@ public class QueueNode<N> {
 
     //mutator/setter methods
     public void setParent(QueueNode<N> parent){
-        this.parent = parent; //reads in parent varible
+        this.parent = parent; //reads in parent variable
     }
 
     public void setChild(QueueNode<N> child) {
@@ -47,15 +47,15 @@ public class QueueNode<N> {
 
     //toString method
     @Override
+    //toString method for the Node class
     public String toString() {
-        //toString method for the Node class
+
         String str = "Node: " + data;
         return str;
     }
     //.equals method
-    public boolean equals(QueueNode n1) {
-        //checks to see if one node is equal to the other
-        //returns true if equal, false otherwise
-        return(data == n1.getData());
-    }
+
+    //checks to see if one node is equal to the other
+    //returns true if equal, false otherwise
+    public boolean equals(QueueNode n1) {return(data == n1.getData());}
 }
